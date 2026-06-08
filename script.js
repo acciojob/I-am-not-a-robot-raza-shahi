@@ -6,7 +6,7 @@ const resetBtn = document.getElementById('reset');
 const verifyBtn = document.getElementById('verify');
 const resultP = document.getElementById('para');
 
-functon start(){
+function start(){
 	container.innerHTML = "";
 	selectedImages = [];
 	resetBtn.style.display = "none";
@@ -20,8 +20,8 @@ functon start(){
 	imagesToShow.forEach((className,index)=>{
 		const img = document.createElement('img');
 		img.className = className;
-		img.setAttibute('data-id',index);
-		img.addEventlistener('click',handleImageClick);
+		img.setAttribute('data-id',index);
+		img.addEventListener('click',handleImageClick);
 		container.appendChild(img);
 	});
 }
@@ -50,7 +50,7 @@ verifyBtn.addEventListener('click',()=>{
 	const firstSelection = selectedImages[0];
 	const secondSelection = selectedImages[1];
 	if(firstSelection.className === secondSelection.className){
-		resultP.inerText = "You are a human. Congratulations!";
+		resultP.innerText = "You are a human. Congratulations!";
 		resultP.style.color = "green";
 	}else{
 		resultP.innerText = "We can't verify you as a human. You selected the non-identical tiles."
