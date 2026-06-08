@@ -37,4 +37,6 @@ p {
 
 button {
   margin: 20px;
+	padding: 8px 16px;
+	cursor:pointer;
 }
